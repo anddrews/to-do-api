@@ -1,0 +1,5 @@
+#dist folder
+/dist
+/data
+/node_modules
+/.idea
