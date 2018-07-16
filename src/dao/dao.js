@@ -39,7 +39,7 @@ class Dao {
   addToDoItem(toDo) {
     return new Promise((resolve, reject) => {
       const idList = this.toDoList.map(item => item.id);
-      toDo.setId(idList ? Math.max(...idList) + 1 : 1);
+      toDo.setId(idList.length > 0 ? Math.max(...idList) + 1 : 1);
       this.toDoList.push(toDo);
       this.saveFile();
       resolve(toDo);
