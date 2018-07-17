@@ -2,6 +2,7 @@ import {ToDo} from '../models';
 
 export const toDoItemMiddleware = {
   extendReqItem: (req, res, next) => {
+    console.log(req.body);
     const newToDo = new ToDo({
       id: req.body.id,
       creationDate: req.body.creationDate,

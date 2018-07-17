@@ -11,6 +11,7 @@ function allowCrossDomain(req, res, next) {
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();
 }
+
 app.use(allowCrossDomain);
-app.use(cookieParser(),express.urlencoded({ extended: true }));
+app.use(cookieParser(), express.json({ extended: true }));
 app.use('/', toDoRouter);
